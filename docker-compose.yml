@@ -1,0 +1,15 @@
+version: '3'
+services:
+  kali-mcp:
+    image: gokulapap/bugbounty-mcp-server  # Z 
+    ports:
+      - "8080:8080"
+    environment:
+      - SHODAN_API_KEY=your_key
+    volumes:
+      - ./tools:/app/tools  # Mount ffuf, nuclei etc. z BugBountyToolkit 
+  cai-ai:
+    image: aliasrobotics/cai:latest  # Z 
+    command: cai --continue --prompt "security audit"
+    depends_on:
+      - kali-mcp
