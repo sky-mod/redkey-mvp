@@ -1,3 +1,4 @@
+"use client"
 // app/api/helpers/error.ts
 import { NextResponse } from "next/server";
 
