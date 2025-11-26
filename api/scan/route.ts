@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
+import CryptoJS from 'crypto-js';
 
 export async function POST(req: NextRequest) {
   const { scope, model } = await req.json();
