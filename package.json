@@ -2,12 +2,13 @@
   "name": "redkey-mvp",
   "version": "1.0.0",
   "private": true,
+  {
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "start": "next start"
+  }
   },
   "dependencies": {
     "@supabase/ssr": "0.5.1",
